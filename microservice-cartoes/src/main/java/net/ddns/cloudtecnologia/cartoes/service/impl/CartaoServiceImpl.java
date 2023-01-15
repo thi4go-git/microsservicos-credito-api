@@ -2,8 +2,11 @@ package net.ddns.cloudtecnologia.cartoes.service.impl;
 
 import net.ddns.cloudtecnologia.cartoes.model.entity.Cartao;
 import net.ddns.cloudtecnologia.cartoes.model.repository.CartaoRepository;
+import net.ddns.cloudtecnologia.cartoes.rest.dto.CartaoDTO;
 import net.ddns.cloudtecnologia.cartoes.service.CartaoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -18,8 +21,8 @@ public class CartaoServiceImpl implements CartaoService {
 
     @Transactional
     @Override
-    public Cartao save(Cartao cartao) {
-        return repository.save(cartao);
+    public Cartao save(CartaoDTO dto) {
+        return repository.save( new Cartao(dto) );
     }
 
     @Transactional
