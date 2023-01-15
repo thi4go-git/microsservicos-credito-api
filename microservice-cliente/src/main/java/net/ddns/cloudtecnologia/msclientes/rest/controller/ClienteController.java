@@ -1,5 +1,6 @@
 package net.ddns.cloudtecnologia.msclientes.rest.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import net.ddns.cloudtecnologia.msclientes.model.entity.Cliente;
 import net.ddns.cloudtecnologia.msclientes.rest.dto.ClienteDTO;
 import net.ddns.cloudtecnologia.msclientes.service.impl.ClienteServiceImpl;
@@ -12,6 +13,7 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/clientes")
+@Slf4j// Acesso aos log
 public class ClienteController {
 
     @Autowired
@@ -19,6 +21,7 @@ public class ClienteController {
 
     @GetMapping("/status")
     public String status() {
+        log.info("Obtendo status do Microserviço de clientes.");
         return "Microsserviços de Cliente Rodando!";
     }
 

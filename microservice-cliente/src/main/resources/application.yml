@@ -2,7 +2,7 @@ spring:
   application:
     name: microservice-cliente
 
-#Subirá em porta aleatória
+#sobe o projeto em porta aleatoria
 server:
   port: 0
 
