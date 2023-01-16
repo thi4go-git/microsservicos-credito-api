@@ -5,8 +5,6 @@ import net.ddns.cloudtecnologia.cartoes.model.repository.CartaoRepository;
 import net.ddns.cloudtecnologia.cartoes.rest.dto.CartaoDTO;
 import net.ddns.cloudtecnologia.cartoes.service.CartaoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
