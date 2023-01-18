@@ -37,7 +37,7 @@ public class ClienteController {
     }
 
 
-    @GetMapping("{cpf}")
+    @GetMapping(params = "cpf")
     public ResponseEntity getByCpf(@RequestParam String cpf) {
         var cliente = service.getByCpf(cpf);
         if (cliente.isEmpty()) {
