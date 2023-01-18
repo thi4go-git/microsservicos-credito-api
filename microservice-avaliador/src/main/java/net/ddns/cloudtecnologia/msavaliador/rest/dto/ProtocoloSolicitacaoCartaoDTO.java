@@ -1,10 +1,10 @@
-package net.ddns.cloudtecnologia.msavaliador.model.entity;
+package net.ddns.cloudtecnologia.msavaliador.rest.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class ProtocoloSolicitacaoCartao {
+public class ProtocoloSolicitacaoCartaoDTO {
     private String protocolo;
 }
