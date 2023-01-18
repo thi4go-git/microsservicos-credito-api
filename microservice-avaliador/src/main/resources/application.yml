@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: microservice-avaliador
+
+#sobe o projeto em porta aleatoria
+server:
+  port: 0
+
+#Apontando para o servidor Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
