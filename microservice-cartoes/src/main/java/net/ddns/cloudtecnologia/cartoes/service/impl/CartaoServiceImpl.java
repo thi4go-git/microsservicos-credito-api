@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CartaoServiceImpl implements CartaoService {
@@ -20,7 +21,7 @@ public class CartaoServiceImpl implements CartaoService {
     @Transactional
     @Override
     public Cartao save(CartaoDTO dto) {
-        return repository.save( new Cartao(dto) );
+        return repository.save(new Cartao(dto));
     }
 
     @Transactional
@@ -28,5 +29,10 @@ public class CartaoServiceImpl implements CartaoService {
     public List<Cartao> getCartoesRendaMenorIgual(Long renda) {
         var rendaBigDecimal = BigDecimal.valueOf(renda);
         return repository.findByRendaLessThanEqual(rendaBigDecimal);
+    }
+
+    @Override
+    public Optional<Cartao> findById(Long id) {
+        return repository.findById(id);
     }
 }

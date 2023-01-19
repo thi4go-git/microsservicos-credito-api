@@ -5,6 +5,8 @@ import net.ddns.cloudtecnologia.msavaliador.client.CartoesResourceClient;
 import net.ddns.cloudtecnologia.msavaliador.client.ClienteResourceClient;
 import net.ddns.cloudtecnologia.msavaliador.exception.DadosClienteNotFoundException;
 import net.ddns.cloudtecnologia.msavaliador.exception.ErroComunicacaoMicroservicesException;
+import net.ddns.cloudtecnologia.msavaliador.exception.ErroSolicitacaoCartaoException;
+import net.ddns.cloudtecnologia.msavaliador.infra.mqueue.SolicitacaoEmissaoCartaoPublisher;
 import net.ddns.cloudtecnologia.msavaliador.model.entity.*;
 import net.ddns.cloudtecnologia.msavaliador.rest.dto.*;
 import net.ddns.cloudtecnologia.msavaliador.service.AvaliadorService;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -28,6 +31,8 @@ public class AvaliadorServiceImpl implements AvaliadorService {
     private CartoesResourceClient cartoesClient;
 
 
+    @Autowired
+    private SolicitacaoEmissaoCartaoPublisher publisher;
 
 
     @Override
@@ -89,8 +94,15 @@ public class AvaliadorServiceImpl implements AvaliadorService {
     }
 
     @Override
-    public ProtocoloSolicitacaoCartaoDTO solicitarEmissaoCartao(DadosSolicitacaoEmissaoCartaoDTO dados) {
-        return null;
+    public ProtocoloSolicitacaoCartaoDTO
+    solicitarEmissaoCartao(DadosSolicitacaoEmissaoCartaoDTO dados) {
+        try {
+            publisher.solicitarCartao(dados);
+            var protocolo = UUID.randomUUID().toString();
+            return new ProtocoloSolicitacaoCartaoDTO(protocolo);
+        } catch (Exception e) {
+            throw new ErroSolicitacaoCartaoException(e.getMessage());
+        }
     }
 
 

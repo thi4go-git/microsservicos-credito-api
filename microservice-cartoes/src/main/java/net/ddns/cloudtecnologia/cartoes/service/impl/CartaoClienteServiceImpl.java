@@ -20,4 +20,9 @@ public class CartaoClienteServiceImpl implements CartaoClienteService {
     public List<CartaoCliente> listCartoesByCpf(String cpf) {
         return repository.findByCpf(cpf);
     }
+
+    @Override
+    public CartaoCliente save(CartaoCliente cartaoCliente) {
+        return repository.save(cartaoCliente);
+    }
 }

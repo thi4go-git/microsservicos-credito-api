@@ -7,4 +7,6 @@ import java.util.List;
 public interface CartaoClienteService {
 
     List<CartaoCliente> listCartoesByCpf(String cpf);
+
+    CartaoCliente save(CartaoCliente cartaoCliente);
 }
