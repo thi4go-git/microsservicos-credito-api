@@ -28,6 +28,8 @@ public class AvaliadorServiceImpl implements AvaliadorService {
     private CartoesResourceClient cartoesClient;
 
 
+
+
     @Override
     public SituacaoCliente obterSituacaoCliente(String cpf)
             throws DadosClienteNotFoundException, ErroComunicacaoMicroservicesException {
@@ -67,7 +69,7 @@ public class AvaliadorServiceImpl implements AvaliadorService {
                 var fator = idadeBD.divide(BigDecimal.valueOf(10));
                 BigDecimal limiteAprovado = fator.multiply(limiteBasico);
 
-                CartaoAprovado aprovado = new CartaoAprovado();
+                CartaoAprovadoDTO aprovado = new CartaoAprovadoDTO();
                 aprovado.setCartao(cartao.getNome());
                 aprovado.setBandeira(cartao.getBandeira());
                 aprovado.setLimiteAprovado(limiteAprovado);
@@ -90,4 +92,6 @@ public class AvaliadorServiceImpl implements AvaliadorService {
     public ProtocoloSolicitacaoCartaoDTO solicitarEmissaoCartao(DadosSolicitacaoEmissaoCartaoDTO dados) {
         return null;
     }
+
+
 }
