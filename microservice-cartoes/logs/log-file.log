@@ -123,3 +123,4 @@
 2023-01-20 12:28:40.511  INFO 26320 --- [restartedMain] n.d.c.c.MicroserviceCartoesApplication   : Started MicroserviceCartoesApplication in 11.661 seconds (JVM running for 13.433)
 2023-01-20 12:29:05.497  INFO 26320 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-20 12:29:05.498  INFO 26320 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-20 12:29:05.499  INFO 26320 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
