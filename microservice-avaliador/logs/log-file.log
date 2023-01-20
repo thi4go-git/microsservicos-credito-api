@@ -38,3 +38,12 @@
 2023-01-20 12:25:27.933  INFO 2132 --- [http-nio-auto-1-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-20 12:25:27.934  INFO 2132 --- [http-nio-auto-1-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-01-20 12:25:27.935  INFO 2132 --- [http-nio-auto-1-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-20 12:30:00.686  INFO 2132 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-01-20 12:34:46.321  INFO 2132 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MICROSERVICE-AVALIADOR with eureka with status DOWN
+2023-01-20 12:34:46.322  INFO 2132 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1674228886322, current=DOWN, previous=UP]
+2023-01-20 12:34:46.322  INFO 2132 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICE-AVALIADOR/microservice-avaliador:3ac9cd6a5afebf9e92b175b1b881fad2: registering service...
+2023-01-20 12:34:46.340  INFO 2132 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICE-AVALIADOR/microservice-avaliador:3ac9cd6a5afebf9e92b175b1b881fad2 - registration status: 204
+2023-01-20 12:34:46.792  INFO 2132 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-01-20 12:34:49.801  INFO 2132 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-01-20 12:34:49.819  INFO 2132 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICE-AVALIADOR/microservice-avaliador:3ac9cd6a5afebf9e92b175b1b881fad2 - deregister  status: 200
+2023-01-20 12:34:49.824  INFO 2132 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
