@@ -2,6 +2,7 @@ package net.ddns.cloudtecnologia.cartoes.infra.mqueue;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import net.ddns.cloudtecnologia.cartoes.model.entity.Cartao;
 import net.ddns.cloudtecnologia.cartoes.model.entity.CartaoCliente;
 import net.ddns.cloudtecnologia.cartoes.rest.dto.DadosSolicitacaoEmissaoCartaoDTO;
@@ -13,6 +14,7 @@ import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
 @Component
+@Slf4j
 public class EmissaoCartaoSubscriber {
 
     @Autowired
@@ -23,6 +25,7 @@ public class EmissaoCartaoSubscriber {
 
     @RabbitListener(queues = "${mq.queues.emissao-cartoes}")
     public void receberSolicitacaoEmissao(@Payload String payload) {
+        System.out.println("payload recebido Subscribe");
         System.out.println(payload);
         var mapper = new ObjectMapper();
         try {
@@ -37,7 +40,7 @@ public class EmissaoCartaoSubscriber {
             cartaoClienteService.save(cartaoCliente);
 
         } catch (JsonProcessingException e) {
-            e.printStackTrace();
+            log.error("Erro ao receber solicitação de emissão de cartão: {} ", e);
         }
     }
 
