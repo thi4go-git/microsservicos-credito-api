@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: microservice-cartoes
+  profiles:
+    active: local
+  rabbitmq:
+    host: RABBIT_MQ_NETWORK
+    port: 5673
+    username: guest
+    password: guest
+
+#sobe o projeto em porta aleatoria
+server:
+  port: 0
+
+#Apontando para o servidor Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-user:ZXVyZWthLXVzZXI=@EUREKA_NETWORK:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+mq:
+  queues:
+    emissao-cartoes: emissao-cartoes
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  file:
+    name: ./logs/log-file.log

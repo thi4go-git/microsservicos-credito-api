@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: microservice-cliente
+  profiles:
+    active: local
+#sobe o projeto em porta aleatoria
+server:
+  port: 0
+
+#Apontando para o servidor Eureka
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-user:ZXVyZWthLXVzZXI=@EUREKA_NETWORK:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  file:
+    name: ./logs/log-file.log

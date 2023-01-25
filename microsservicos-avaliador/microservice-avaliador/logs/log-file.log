@@ -1,0 +1,93 @@
+2023-01-25 12:12:16.430  INFO 16596 --- [restartedMain] n.d.c.m.MicroserviceAvaliadorApplication : Starting MicroserviceAvaliadorApplication using Java 11.0.16.1 on GOVBR8499 with PID 16596 (C:\Users\thiago.melo\IdeaProjects\microsservicos-credito-api\microservice-avaliador\target\classes started by thiago.melo in C:\Users\thiago.melo\IdeaProjects\microsservicos-credito-api\microservice-avaliador)
+2023-01-25 12:12:16.438  INFO 16596 --- [restartedMain] n.d.c.m.MicroserviceAvaliadorApplication : The following 1 profile is active: "local"
+2023-01-25 12:12:16.509  INFO 16596 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-25 12:12:16.510  INFO 16596 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-25 12:12:18.517  INFO 16596 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c117c671-d560-3f54-873d-3f60fafa122c
+2023-01-25 12:12:19.758  INFO 16596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-01-25 12:12:19.771  INFO 16596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-25 12:12:19.772  INFO 16596 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-25 12:12:19.948  INFO 16596 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-25 12:12:19.948  INFO 16596 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3437 ms
+2023-01-25 12:12:20.843  WARN 16596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-01-25 12:12:20.921  INFO 16596 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'microservice-cliente' URL not provided. Will try picking an instance via load-balancing.
+2023-01-25 12:12:21.005  INFO 16596 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'microservice-cartoes' URL not provided. Will try picking an instance via load-balancing.
+2023-01-25 12:12:23.458  INFO 16596 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-01-25 12:12:23.528  WARN 16596 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-01-25 12:12:23.536  INFO 16596 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-01-25 12:12:23.612  INFO 16596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 62767 (http) with context path ''
+2023-01-25 12:12:23.613  INFO 16596 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 62767
+2023-01-25 12:12:23.619  INFO 16596 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-01-25 12:12:23.732  INFO 16596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-01-25 12:12:23.741  INFO 16596 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-01-25 12:12:23.776  INFO 16596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-01-25 12:12:23.776  INFO 16596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-01-25 12:12:23.776  INFO 16596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-01-25 12:12:23.777  INFO 16596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-01-25 12:12:23.777  INFO 16596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-01-25 12:12:23.777  INFO 16596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-01-25 12:12:23.777  INFO 16596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-01-25 12:12:24.235  INFO 16596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-01-25 12:12:24.239  INFO 16596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-01-25 12:12:24.242  INFO 16596 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-01-25 12:12:24.248  INFO 16596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1674659544247 with initial instances count: 2
+2023-01-25 12:12:24.249  INFO 16596 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MICROSERVICE-AVALIADOR with eureka with status UP
+2023-01-25 12:12:24.250  INFO 16596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1674659544250, current=UP, previous=STARTING]
+2023-01-25 12:12:24.252  INFO 16596 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICE-AVALIADOR/microservice-avaliador:cba62b3d5d0e3313159d8074199caf76: registering service...
+2023-01-25 12:12:24.383  INFO 16596 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICE-AVALIADOR/microservice-avaliador:cba62b3d5d0e3313159d8074199caf76 - registration status: 204
+2023-01-25 12:12:24.621  INFO 16596 --- [restartedMain] n.d.c.m.MicroserviceAvaliadorApplication : Started MicroserviceAvaliadorApplication in 9.425 seconds (JVM running for 10.766)
+2023-01-25 12:17:23.788  INFO 16596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-01-25 12:18:37.940  INFO 16596 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MICROSERVICE-AVALIADOR with eureka with status DOWN
+2023-01-25 12:18:37.940  INFO 16596 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1674659917940, current=DOWN, previous=UP]
+2023-01-25 12:18:37.941  INFO 16596 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICE-AVALIADOR/microservice-avaliador:cba62b3d5d0e3313159d8074199caf76: registering service...
+2023-01-25 12:18:37.950  INFO 16596 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICE-AVALIADOR/microservice-avaliador:cba62b3d5d0e3313159d8074199caf76 - registration status: 204
+2023-01-25 12:18:38.508  INFO 16596 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-01-25 12:18:41.521  INFO 16596 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-01-25 12:18:41.553  INFO 16596 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICE-AVALIADOR/microservice-avaliador:cba62b3d5d0e3313159d8074199caf76 - deregister  status: 200
+2023-01-25 12:18:41.563  INFO 16596 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-01-25 13:38:27.177  INFO 6988 --- [restartedMain] n.d.c.m.MicroserviceAvaliadorApplication : Starting MicroserviceAvaliadorApplication using Java 17.0.6 on GOVBR8499 with PID 6988 (C:\Users\thiago.melo\IdeaProjects\microsservicos-credito-api\microservice-avaliador\target\classes started by thiago.melo in C:\Users\thiago.melo\IdeaProjects\microsservicos-credito-api\microservice-avaliador)
+2023-01-25 13:38:27.180  INFO 6988 --- [restartedMain] n.d.c.m.MicroserviceAvaliadorApplication : The following 1 profile is active: "local"
+2023-01-25 13:38:27.356  INFO 6988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-25 13:38:27.357  INFO 6988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-25 13:38:29.475  INFO 6988 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=abc8d949-6115-3201-af0c-763ff5e2a6fd
+2023-01-25 13:38:30.378  INFO 6988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-01-25 13:38:30.394  INFO 6988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-25 13:38:30.394  INFO 6988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2023-01-25 13:38:30.574  INFO 6988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-25 13:38:30.574  INFO 6988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3217 ms
+2023-01-25 13:38:31.700  WARN 6988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-01-25 13:38:31.773  INFO 6988 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'microservice-cliente' URL not provided. Will try picking an instance via load-balancing.
+2023-01-25 13:38:31.860  INFO 6988 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'microservice-cartoes' URL not provided. Will try picking an instance via load-balancing.
+2023-01-25 13:38:34.111  INFO 6988 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-01-25 13:38:34.173  WARN 6988 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-01-25 13:38:34.184  INFO 6988 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2023-01-25 13:38:34.256  INFO 6988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 62451 (http) with context path ''
+2023-01-25 13:38:34.257  INFO 6988 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 62451
+2023-01-25 13:38:34.264  INFO 6988 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-01-25 13:38:34.369  INFO 6988 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-01-25 13:38:34.380  INFO 6988 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-01-25 13:38:34.415  INFO 6988 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-01-25 13:38:34.415  INFO 6988 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-01-25 13:38:34.415  INFO 6988 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-01-25 13:38:34.416  INFO 6988 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-01-25 13:38:34.416  INFO 6988 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-01-25 13:38:34.416  INFO 6988 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-01-25 13:38:34.416  INFO 6988 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-01-25 13:38:34.859  INFO 6988 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-01-25 13:38:34.863  INFO 6988 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-01-25 13:38:34.866  INFO 6988 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-01-25 13:38:34.872  INFO 6988 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1674664714871 with initial instances count: 2
+2023-01-25 13:38:34.874  INFO 6988 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MICROSERVICE-AVALIADOR with eureka with status UP
+2023-01-25 13:38:34.875  INFO 6988 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1674664714875, current=UP, previous=STARTING]
+2023-01-25 13:38:34.878  INFO 6988 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICE-AVALIADOR/microservice-avaliador:46a34ccb59323edd933a50bf1df10413: registering service...
+2023-01-25 13:38:35.012  INFO 6988 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICE-AVALIADOR/microservice-avaliador:46a34ccb59323edd933a50bf1df10413 - registration status: 204
+2023-01-25 13:38:35.027  INFO 6988 --- [restartedMain] n.d.c.m.MicroserviceAvaliadorApplication : Started MicroserviceAvaliadorApplication in 8.997 seconds (JVM running for 9.96)
+2023-01-25 13:39:54.122  INFO 6988 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-25 13:39:54.122  INFO 6988 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-25 13:39:54.125  INFO 6988 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-01-25 13:43:34.429  INFO 6988 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-01-25 13:48:34.448  INFO 6988 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-01-25 13:53:34.451  INFO 6988 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-01-25 13:58:34.462  INFO 6988 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-01-25 13:59:32.872  INFO 6988 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MICROSERVICE-AVALIADOR with eureka with status DOWN
+2023-01-25 13:59:32.874  INFO 6988 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1674665972874, current=DOWN, previous=UP]
+2023-01-25 13:59:32.875  INFO 6988 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MICROSERVICE-AVALIADOR/microservice-avaliador:46a34ccb59323edd933a50bf1df10413: registering service...
