@@ -1,6 +1,8 @@
 spring:
   application:
     name: microservice-avaliador
+  profiles:
+    active: local
   rabbitmq:
     host: localhost
     port: 5672
